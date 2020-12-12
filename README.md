@@ -4,21 +4,24 @@ Allows automatic login+pin and makes pin input easier.
 ## Features
 - Pin numbers are unrandomized
 - Allow keyboard input on pin window
-- (Optional) Auto login using environment variables or command line arguments with ingame-login patch or on private server
+- (Optional) Auto-login using environment variables or command line arguments with ingame-login patch or on private server
     
     This makes it possible to login straight to char select with just a .bat file (see example in .zip) and allows a more simple way of selecting accounts in launchers, including private server (CN175) launchers.
-- (Optional) Auto pin using environment variables or command line arguments
+- (Optional) Auto-pin using environment variables or command line arguments
     
     Separate from auto login, you can use this without ingame-login and with pretty much any launcher that allows custom cmd arguments or environment variables.
     
 ## Notes
-Please prefer environment variables over cmd arguments whenever posibile, it's safer and supports all characters.
+Auto-login needs the [use-ingame-login.xml][0.0] patch applied for retail server.
 
-If you're using this plugin as a template, consider [using updated dependencies][0.0].
+Please prefer environment variables over cmd arguments whenever posibile, it's safer and supports all characters.
 
 NCSoft EU/NA passwords are limited to 16 characters. If you're getting "wrong password" check if you have too many letters.
 
-[0.0]: https://github.com/bnsmodpolice/bnspatch/tree/master/dependencies
+If you're using this plugin as a template, consider [using updated dependencies][0.1].
+
+[0.0]: https://github.com/bnsmodpolice/bnspatch/blob/master/contrib/use-ingame-login.xml
+[0.1]: https://github.com/bnsmodpolice/bnspatch/tree/master/dependencies
 
 ## Download
 <https://mega.nz/folder/4EUF2IhL#Ci1Y-sbbyw7nwwMGvHV2_w>
