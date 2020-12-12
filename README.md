@@ -20,11 +20,13 @@ If you're using this plugin as a template, consider [using updated dependencies]
 - [microsoft/**GSL**][1.1] (MIT license)
 - [processhacker/**phnt**][1.2] (CC-BY-4.0 license)
 - [JustasMasiulis/**xorstr**][1.3] (Apache-2.0 license)
-- [searchers.h][1.4] from [bnsmodpolice/**bnspatch**][1.5] (MIT License)
+- [bnsmodpolice/**bnspatch**][1.4] (MIT License) ([searchers.h][1.5])
+- [bnsmodpolice/**pluginloader**][1.6] (MIT License)
 
 [1.0]: https://github.com/microsoft/Detours
 [1.1]: https://github.com/microsoft/GSL
 [1.2]: https://github.com/processhacker/phnt
 [1.3]: https://github.com/JustasMasiulis/xorstr
-[1.4]: https://github.com/bnsmodpolice/bnspatch/blob/5d49740e4395bfb9bf6a484f74f7e3ef9ea37931/src/client/searchers.h
-[1.5]: https://github.com/bnsmodpolice/bnspatch
+[1.4]: https://github.com/bnsmodpolice/bnspatch
+[1.5]: https://github.com/bnsmodpolice/bnspatch/blob/5d49740e4395bfb9bf6a484f74f7e3ef9ea37931/src/client/searchers.h
+[1.6]: https://github.com/bnsmodpolice/pluginloader
