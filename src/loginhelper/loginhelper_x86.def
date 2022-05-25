@@ -1,3 +1,0 @@
-LIBRARY loginhelper.dll
-EXPORTS
-	GetPluginInfo2
