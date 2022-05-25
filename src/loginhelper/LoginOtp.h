@@ -39,10 +39,12 @@ bool GetPin()
 		CppTotp::Bytes::ByteString qui = CppTotp::Bytes::fromUnpaddedBase32(normalizedKey);
 
 		uint32_t p = CppTotp::totp(qui, time(NULL), 0, 30, 6);
-		std::string otppin = std::to_string(p);
+
+		char buffer[7];
+		sprintf_s(buffer, "%06d", p);
 
 		for (int i = 0; i < 6; i++) {
-			pincode[i] = otppin[i] - '0';
+			pincode[i] = buffer[i] - '0';
 		}
 
 		if (!keeppin)
