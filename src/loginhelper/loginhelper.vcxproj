@@ -29,7 +29,7 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
@@ -71,7 +71,7 @@
       <LanguageStandard>stdcpplatest</LanguageStandard>
       <ObjectFileName>$(IntDir)%(RelativeDir)%(Filename)%(Extension).obj</ObjectFileName>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
-      <AdditionalIncludeDirectories>$(SolutionDir)include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)include\Detours\src;$(SolutionDir)include</AdditionalIncludeDirectories>
       <RuntimeTypeInfo>false</RuntimeTypeInfo>
     </ClCompile>
     <Link>
@@ -94,6 +94,9 @@
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
+    <PostBuildEvent>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">xcopy /y /d  "$(OutDir)*.dll" "C:\Games\NCSoft\BnS_TW\BNSR\Binaries\Win64\plugins\"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <!-- Release -->
   <ItemDefinitionGroup Condition="'$(Configuration)'=='Release'">
@@ -116,6 +119,9 @@
       <SetChecksum>true</SetChecksum>
       <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
     </Link>
+    <PostBuildEvent>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">xcopy /y /d  "$(OutDir)*.dll" "C:\Games\NCSoft\BnS_TW\BNSR\Binaries\Win64\plugins\"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <!-- Targets -->
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
@@ -124,11 +130,28 @@
   </ImportGroup>
   <!-- Items -->
   <ItemGroup>
+    <ClCompile Include="..\..\include\Detours\src\creatwth.cpp" />
+    <ClCompile Include="..\..\include\Detours\src\detours.cpp" />
+    <ClCompile Include="..\..\include\Detours\src\disasm.cpp" />
+    <ClCompile Include="..\..\include\Detours\src\image.cpp" />
+    <ClCompile Include="..\..\include\Detours\src\modules.cpp" />
+  </ItemGroup>
+  <ItemGroup>
     <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="libcppotp\bytes.cpp" />
+    <ClCompile Include="libcppotp\otp.cpp" />
+    <ClCompile Include="libcppotp\sha1.cpp" />
     <ClCompile Include="versioninfo.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Data.h" />
+    <ClInclude Include="libcppotp\bytes.h" />
+    <ClInclude Include="libcppotp\otp.h" />
+    <ClInclude Include="libcppotp\sha1.h" />
+    <ClInclude Include="Lobby.h" />
+    <ClInclude Include="LoginOtp.h" />
+    <ClInclude Include="memset.h" />
+    <ClInclude Include="totp.h" />
     <ClInclude Include="versioninfo.h" />
   </ItemGroup>
 </Project>
