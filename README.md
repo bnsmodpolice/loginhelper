@@ -6,7 +6,7 @@ Allows automatic login+pin and makes pin input easier.
 - Allow keyboard input on pin window
 - (Optional) Auto-login using environment variables or command line arguments with ingame-login patch or on private server
     
-    This makes it possible to login straight to char select with just a .bat file (see example in .zip) and allows a more simple way of selecting accounts in launchers, including private server (CN175) launchers.
+    This makes it possible to login straight to char select with just a .bat file (see example in .zip) and allows a more simple way of selecting accounts in launchers, including private server launchers.
 - (Optional) Auto-pin using environment variables or command line arguments
     
     Separate from auto login, you can use this without ingame-login and with pretty much any launcher that allows custom cmd arguments or environment variables.
